@@ -41,7 +41,14 @@ namespace UrlLinkApplication
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(options =>
+            {
+                options.MapRoute(
+                    name: "Demo",
+                    template: "api/organizers/{id}",
+                    defaults: new { controller = "organizers", action = "GetAction" }
+                );
+            });
         }
     }
 }

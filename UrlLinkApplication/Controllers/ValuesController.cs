@@ -10,7 +10,7 @@ namespace UrlLinkApplication.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            var link = Url.Link("Demo", new { id });
+            var link = Url.Link("organizers", new { id });
             return link;
         }
 

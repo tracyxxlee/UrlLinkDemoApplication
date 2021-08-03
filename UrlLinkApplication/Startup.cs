@@ -44,7 +44,7 @@ namespace UrlLinkApplication
             app.UseMvc(options =>
             {
                 options.MapRoute(
-                    name: "Demo",
+                    name: "organizers",
                     template: "api/organizers/{id}",
                     defaults: new { controller = "organizers", action = "GetAction" }
                 );
